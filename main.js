@@ -65,7 +65,7 @@ buttonModalAdd.onclick = function () {
 }
 
 // Lista de itens no carrinho
-var carrinhoItens = [];
+let carrinhoItens = [];
 
 // Função para abrir o modal de adição de item
 function abrirModalAddItem() {
@@ -94,8 +94,8 @@ function adicionarItem() {
   }
 
   // Verifica se o nome está vazio
-  if (nome === "") {
-    tratarErroEntrada(nomeInput, "Entre 1 a 25 caracteres");
+  if (nome.trim() === "" || nome.trim().length > 20) {
+    tratarErroEntrada(nomeInput, "Entre 1 a 20 caracteres");
     mensagemNotfitEnsErr("Nome")
     return;
   }
@@ -111,6 +111,7 @@ function adicionarItem() {
     mensagemNotfitEnsErr("Desconto")
     return;
   }
+
   // Remove a classe de campo inválido se a entrada for válida
   nomeInput.classList.remove("campo-invalido");
   precoInput.classList.remove("campo-invalido");
