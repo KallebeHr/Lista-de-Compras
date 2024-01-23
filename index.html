@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link id="temasCss" rel="stylesheet" href="styles/index.css">
+  <title>Lista de Compras Online</title>
+  <script src="https://kit.fontawesome.com/ddd3089d1b.js" crossorigin="anonymous"></script>
+  <link  rel="stylesheet" href="iziToast-master/dist/css/iziToast.min.css">
+  
+</head>
+ 
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <p><i id="cart" class="fa-solid fa-cart-shopping"></i></p>
+    <dialog class="modalItens">
+      <div class="container-Modal-Cart">
+        <h1 class="text-modal-titulo">Itens No Carrinho</h1>
+        <div class="container-modais">
+          <div class="container-modal-item">
+            <!-- <p class="text-modal-Item">Nome Do Item</p>
+              <p class="text-modal-Preco">R$ 00.00</p>
+              <p class="text-modal-Desconto">Desconto: 00%</p>
+              <p class="text-modal-Desconto">Quantidade: 00</p> -->
+            </div>
+          </div>
+          <div class="text-modal-container-resultado">
+            <p class="text-modal-resultado">Preço bruto:</p>
+            <p class="text-modal-resultado">Desconto:</p>
+            <p class="text-modal-resultado">Preço final:</p>
+          </div>
+        <button id="itensclose" >Fechar</button>
+      </div>
+    </dialog>
+    <p>
+      <i id="temaSun" class="fa-solid fa-sun"></i>
+      <i id="temaMoon" class="fa-solid fa-moon"></i>  
+    </p>
+  </header>
+  <main class="main">
+    <!-- Seção de Início  -->
+    <section id="inicio">
+      <h2 class="text-inicio" id="">Lista de Compras Online</h2>
+      <span class="text-hora" id="">00:00:00</span>
+    </section>
+
+    <!-- Seção Escolhas -->
+    <section class="escolhas">
+      <button id="bntAdd" class="btn-add">Adicionar Item</button>
+      <dialog class="modalAdd">
+        <div class="container-moda-AddItens">
+          <h1 class="titulo-add">Adicionar Item</h1>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Nome Do Item" id="btnItemNome" name="text" class="input">
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Preço Do Item" id="btnItemPreco" name="text" class="input">
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Desconto Do Item" id="btnItemDesco" name="text" class="input">
+          </div>
+          <div class="input-wrapper">
+            <input type="text" placeholder="Quantidade De Itens" id="btnItemQuant" name="text" class="input">
+          </div>
+          <button class="btn-add-modal" onclick="adicionarItem()">Adicionar Item</button>
+          <button id="addclose">Fechar</button>
+        </div>
+      </dialog>
+      <button class="btn-fin" onclick="itensClean()">Finalizar Compras</button>
+    </section>
+  </main>
+  <section class="sociais">
+
+  </section>
+  <script src="js/iziToast.js" type="application/javascript"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,418 @@
+/* Importação de Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;500;600;700&display=swap');
+
+/* Reset CSS para garantir consistência em todos os navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Globais do Body */
+body {
+  background: #2c3e50;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Estilos do Cabeçalho */
+header {
+  background-color: #075c02;
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 20px 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  box-shadow: -1px 10px 6px -4px rgba(0, 0, 0, 0.54);
+}
+
+/* Estilos da Seção Principal */
+.main {
+  background: #075c02;
+  color: #2c3e50;
+  display: flex;
+  margin: 5rem auto;
+  padding: 10px;
+  width: 50%;
+  color: var(--input-text-color-dark);
+  height: 25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 66px;
+  box-shadow: -1px 10px 6px -4px rgba(0, 0, 0, 0.54);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilizar Carrinho de Compras*/
+.fa-solid.fa-cart-shopping {
+  color: var(--text-color-dark);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+/* Estilizar Carrinho de Compras*/
+.fa-solid.fa-sun,
+.fa-solid.fa-moon {
+  color: #000000;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.dark-theme .fa-solid.fa-sun {
+  display: inline;
+}
+
+.dark-theme .fa-solid.fa-moon {
+  display: none;
+}
+
+/* Estilos para Texto de Início */
+.text-inicio {
+  font-family: 'Roboto';
+}
+
+/* Estilos para Texto de Início */
+.text-inicio {
+  font-family: 'Roboto';
+}
+
+/* Estilos para Texto de Hora */
+.text-hora {
+  margin-top: 10px;
+  padding-left: 5.5rem;
+  font-weight: 900;
+  font-family: 'Rethink Sans', sans-serif;
+  letter-spacing: 3px;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Estilos para as Escolhas */
+.escolhas {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  padding: 10px;
+}
+/* Estilização do button de excluir item*/
+.buttonClose {
+  position: relative;
+  bottom: 7rem;
+  left: 16.7rem;
+  color: red;
+  cursor: pointer;
+  font-size: 26px;
+  border: none;
+  background: none;
+  padding: 0;
+}
+/* Estilos para Botões e Elementos com Animação de Opacidade */
+.btn-add,
+.btn-calc,
+.btn-fin,
+.text-hora,
+.text-inicio {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.show {
+  opacity: 1;
+}
+
+/* Area de estilização dos inputs*/
+.input-wrapper input {
+  background-color: #eee;
+  border: none;
+  padding: 0.5rem;
+  margin: 10px 0px 10px 0px;
+  font-size: 1rem;
+  width: 13em;
+  border-radius: 1rem;
+  color: lightcoral;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+}
+
+.input-wrapper input:focus {
+  outline-color: lightcoral;
+}
+
+.btn-add-modal {
+  padding: 10px 10px 10px 10px;
+  width: 13rem;
+  margin-top: 20px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #2c3e50;
+  background-color: #E2F0F7;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  font-weight: 800;
+  transition: 0.4s;
+}
+
+.btn-fin,
+.btn-add {
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: white;
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  font-weight: 800;
+  transition: 0.4s;
+}
+
+.btn-add:hover,
+.btn-fin:hover {
+  background-color: rgba(58, 88, 59, 0.918);
+  box-shadow: 0px 15px 20px rgba(46, 229, 156, 0.144);
+  color: #f7f7f7;
+  transform: translateY(-3px);
+  transition: 0.4s;
+}
+
+.btn-add,
+.btn-fin:active {
+  transform: translateY(-1px);
+}
+
+/* Area de estilização de Modal*/
+.modalItens {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: #E2F0F7;
+  border-radius: 10px;
+  background: #2c3e50;
+  box-shadow: -1px 10px 6px -4px rgba(0, 0, 0, 0.54);
+}
+
+/* Area de estilização de itens do Modal*/
+.text-modal-titulo {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display: flex;
+}
+
+.container-modal-item {
+  border: 1px solid #1a1a1a;
+  min-width: 18rem;
+  height: 8rem;
+  white-space: nowrap;
+  /* Impede a quebra de linha */
+  margin: 15px 15px;
+  padding: 5px 10px 10px 10px;
+  border: none;
+  color: #E2F0F7;
+  background: #075c02;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.container-modais {
+  display: flex;
+  width: 100%;
+  /* Ajuste conforme necessário */
+  height: auto;
+  /* Ajuste conforme necessário */
+  overflow-x: auto;
+  /* Adiciona a barra de rolagem horizontal quando o conteúdo excede a largura do quadrado */
+  border: 3px solid;
+  /* Adiciona uma borda para visualização */
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.container-modais::-webkit-scrollbar {
+  height: 10px;
+  /* Altura da barra de rolagem horizontal */
+}
+
+.container-modais::-webkit-scrollbar-thumb {
+  background-color: #A178DF;
+  border-radius: 5px;
+}
+
+.container-Modal-Cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.text-modal-resultado {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#addclose, #itensclose {
+  width: 5rem;
+  border: none;
+  border-radius: 10px;
+  height: 2rem;
+  margin-top: 1rem;
+  font-weight: 800;
+  background-color: #E2F0F7;
+  cursor: pointer;
+  color: red;
+}
+
+/* Titulo do modal de Add */
+.titulo-add {
+  margin: 20px;
+}
+
+/* Estilizar Modal de Add o Item*/
+.modalAdd {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 50%;
+  border-radius: 10px;
+  background: #2c3e50;
+  border: none;
+  color: #E2F0F7;
+  box-shadow: -1px 10px 6px -4px rgba(0, 0, 0, 0.54);
+}
+
+.modalAdd::backdrop {
+  background-color: #0000002a;
+}
+
+.container-moda-AddItens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.campo-invalido {
+  border-color: red;
+  /* Adicione estilos adicionais conforme necessário */
+  color: red;
+}
+
+/* Estilos para tablets */
+@media screen and (max-width: 768px) {
+
+  .modalItens,
+  .modalAdd {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+/* Estilos para dispositivos menores, como smartphones */
+@media screen and (max-width: 480px) {
+
+  .modalItens,
+  .modalAdd {
+    width: 95%;
+    height: 60%;
+  }
+
+  header,
+  .main {
+    width: 80%;
+  }
+
+  .container-modal-item {
+    min-width: 15rem;
+  }
+  .buttonClose{
+    position: relative;
+    bottom: 7rem;
+    left: 13.8rem;
+    font-size: 26px;
+    padding: 0;
+  }
+}
+
+/* Estilos para dispositivos maiores que tablets, como iPads e tablets Android em modo paisagem */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .modalItens,
+  .modalAdd {
+    width: 55%;
+    height: 70%;
+  }
+
+  header,
+  .main {
+    width: 65%;
+  }
+}
+
+@media screen and(min-width: 1024px) {
+  .modalItens {
+    width: 70%;
+    height: 80%;
+  }
+
+  .modalAdd {
+    width: 70%;
+    height: 80%;
+  }
+
+  header,
+  .main {
+    width: 80%;
+  }
+}
+
+/* Estilos para computadores grandes e monitores largos */
+@media screen and (min-width: 1025px) {
+
+  .modalItens,
+  .modalAdd {
+    width: 35%;
+    height: 55%;
+  }
+
+  header,
+  .main {
+    width: 50%;
+  }
+
+  .modalAdd {
+    width: 20%;
+    height: 65%;
+  }
+}
